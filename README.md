@@ -20,7 +20,15 @@ The current file has the "Entire Process" part which gives a list of all steps t
 # ============================
 #     Entire Process 
 # ============================
-Steps to Complete the Registration, Calibration & Force Estimation Process
+
+(How to run)
+
+NO installation or compile required! You just need to navigate to the /bin directory and execute the following command:
+     
+    sudo chmod +x runscript_aam runscript_gui
+    ./runscript_gui
+
+You will be asked a few questions regarding the path file and then the GUI will show up!
 
 (Files, Folders and Formats)
 
@@ -36,7 +44,8 @@ Steps to Complete the Registration, Calibration & Force Estimation Process
         b. Data Format: test_fingerIdx_trialIdx.mat
         c. Data structure: forces(recorded forces), images(captured images), x_pose(end_effector position)
         d. Output: estimated forces in data folder (force_FingerIdx_ResIdx.mat) 
-  
+
+Steps to Complete the Registration, Calibration & Force Estimation Process
 (Part 1, MATLAB)
 
     1. Assemble a data set (test_assemble_data)
