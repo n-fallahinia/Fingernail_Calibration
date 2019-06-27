@@ -29,6 +29,13 @@ NO installation or compile required! You just need to navigate to the /bin direc
     ./runscript_gui
 
 You will be asked a few questions regarding the path file and then the GUI will show up!
+Once the Registration finished, first run the following command in the ./am_tools/linux_bin to check for the installed libraries:
+    
+     sudo qt_installer.sh
+
+Finally, you need to go back to the /bin and execute the am_tool software as follows:
+    
+    ./runscript_amm
 
 (Files, Folders and Formats)
 
