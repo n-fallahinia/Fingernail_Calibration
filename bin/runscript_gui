@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# This script runs the Matlab GUI for image registration and model calibration
+# Bio-Robotics Lab
+# By Navid Fallahinia
+# 10 Feb 2018 
+
+echo -n "Do you have the lib directory in Matlab default path [Y/n]"
+read ans
+if [[ $ans = "n" ]] ; then
+	echo -e -n "Adding the required dirs to Matlab path, please wait ... "
+	matlab -nodisplay -nosplash -nodesktop -r "run('pathdef.m');exit;" | tail -n +11
+	echo -e "DONE!"
+	echo -e "\t Starting the Fingernail Imaging GUI..."
+	matlab -nodesktop -nosplash -r "run('calibration_gui.m');" | tail -n +11 
+
+else
+	echo -e "\t Starting the Fingernail Imaging GUI ..."
+	matlab -nodesktop -nosplash -r "run('calibration_gui.m');" | tail -n +11 
+fi

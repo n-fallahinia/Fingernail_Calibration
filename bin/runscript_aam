@@ -1,0 +1,58 @@
+#!/bin/bash
+
+# This script automates the registration process by clicking on different locations on the screen.
+# Bio-Robotics Lab
+# By Navid Fallahinia
+# 10 Feb 2018 
+
+echo -n "Type the maximume number of images in the .smd file, followed by [ENTER]:"
+read num
+re='^[0-9]+$'
+if ! [[ $num =~ $re ]] ; then
+   echo "Error: Not a number, try again... !" >&2; exit 1
+else
+	echo -n "Do you want the manual process? [Y/n] "
+	read ans
+	if [[ $ans = "y" ]]; then 
+		echo -e "Registration has stated ..."
+		count=1
+		while [ $count -lt $num ];do
+			echo -e -n "Registred image#:" $count
+			# Search button
+			xdotool mousemove 1633 206 click 1
+			echo -e -n '  Searched...OK?'
+			xdotool mousemove 2392 590 click 1
+			read -s -n 1 key
+			if [[ $key = "" ]]; then 
+	  			# Save button
+				xdotool mousemove 1680 172 click 1
+				echo -e ' Saved...!'
+				# Next button
+				xdotool mousemove 1794 251 click 1
+				xdotool key f
+				count=`expr $count + 1`
+			else
+	    		echo " must press ENTER to proceed!"
+			fi
+		done
+	else
+		echo -e "Registration has stated ..."
+		count=1
+		while [ $count -lt $num ];do
+			echo -e -n "Registred image#:" $count
+			# Search button
+			xdotool mousemove 1633 206 click 1
+			echo -e -n '  Searched...'
+			xdotool mousemove 2392 590 click 1
+			sleep 0.5
+	  		# Save button
+			xdotool mousemove 1680 172 click 1
+			echo -e ' Saved...!'
+			# Next button
+			xdotool mousemove 1794 251 click 1
+			xdotool key f
+			count=`expr $count + 1`
+		done
+	fi
+	echo "Registration has finished for this .smd file ..."
+fi
