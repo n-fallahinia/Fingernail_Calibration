@@ -1,10 +1,8 @@
 # fingernail_soft
 
-# =============================================================
-
-#                       General Information 
-
-# =============================================================
+# ============================================
+# General Information 
+# ============================================
 
 All code in this folder is for registration, calibration and data analysis.  For the purposes of this file, "subject" refers to an individual, "finger" refers to any of the digits of the hand (thumb, index, middle, ring or little) and "light color" refers to the LED color used to illuminate the finger while images are collected.
 
@@ -22,12 +20,12 @@ The 'am_tools' folder contains the am_tools functions.  For your use in registra
 
 The current file has the "Entire Process" part which gives a list of all steps that need to be taken from initial data collection to data analysis.
 
-=============================================================
-                       Entire Process
-=============================================================
+# ============================================
+# Entire Process 
+# ============================================
 Steps to Complete the Registration, Calibration & Force Estimation Process
 
-  (Files, Folders and Formats)
+#  (Files, Folders and Formats)
 
     1. Collected data
       1. Calibration Data
@@ -42,8 +40,7 @@ Steps to Complete the Registration, Calibration & Force Estimation Process
         c. Data structure: forces(recorded forces), images(captured images), x_pose(end_effector position)
         d. Output: estimated forces in data folder (force_FingerIdx_ResIdx.mat) 
   
-
-  (Part 1, MATLAB)
+#  (Part 1, MATLAB)
 
     1. Assemble a data set (test_assemble_data)
     2. Create the model (SMD) file and "To-Do" lists (test_create_todo_lists)
@@ -53,18 +50,16 @@ Steps to Complete the Registration, Calibration & Force Estimation Process
        (test_generate_points_files)
     5. Assemble the TrainingData, ShapeData, TextureData and AppearanceData
        structures and the .TRI file (test_assemble_AAM_model)
+# ============================================
 
-==========================================================================================================================
-
-  (Part 2, C++)
+#  (Part 2, C++)
 
     6. Build the AAM (am_build_apm, am_build_aam)
     7. Create .pts files corresponding to all of the "To-Do" list images
        (am_markup).
+# ============================================
 
-==========================================================================================================================
-
-  (Part 3, MATLAB)
+# (Part 3, MATLAB)
 
     8. Verify that the AAM has properly registered all images and that no
        duplicates exist (test_verify_aam_registration)
@@ -83,13 +78,7 @@ Steps to Complete the Registration, Calibration & Force Estimation Process
      (d) Display one of the above errors (e.g., test_display_validation_error)
    14. Estimate grasping forces (test_eigennail_predic_func)
 
-==========================================================================================================================
-
-This document was prepared by Navid Fallahinia
-12 Feb 2018
-
-
-
+# ============================================
 This document was prepared by Navid Fallahinia
 Created 01 April 2018
 Modified 26 August 2018
