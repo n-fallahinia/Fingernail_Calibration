@@ -1,6 +1,6 @@
- #============================
- # General Information 
- #============================
+ # ============================
+ #    General Information 
+ # ============================
 All code in this folder is for registration, calibration and data analysis.  For the purposes of this file, "subject" refers to an individual, "finger" refers to any of the digits of the hand (thumb, index, middle, ring or little) and "light color" refers to the LED color used to illuminate the finger while images are collected.
 
 The 'matlab' folder contains functions that form Active Appearance Models and display the results.  The files in this folder will either need to be placed in 'C:\fingerdata\finger_asm\matlab', or somewhere that is already on the MATLAB path, or else many of the scripts in the other subfolders will not run correctly.
@@ -18,11 +18,11 @@ The 'am_tools' folder contains the am_tools functions.  For your use in registra
 The current file has the "Entire Process" part which gives a list of all steps that need to be taken from initial data collection to data analysis.
 
 # ============================
-# Entire Process 
+#     Entire Process 
 # ============================
 Steps to Complete the Registration, Calibration & Force Estimation Process
 
-#  (Files, Folders and Formats)
+(Files, Folders and Formats)
 
     1. Collected data
       1. Calibration Data
@@ -37,7 +37,7 @@ Steps to Complete the Registration, Calibration & Force Estimation Process
         c. Data structure: forces(recorded forces), images(captured images), x_pose(end_effector position)
         d. Output: estimated forces in data folder (force_FingerIdx_ResIdx.mat) 
   
-#  (Part 1, MATLAB)
+(Part 1, MATLAB)
 
     1. Assemble a data set (test_assemble_data)
     2. Create the model (SMD) file and "To-Do" lists (test_create_todo_lists)
@@ -49,14 +49,14 @@ Steps to Complete the Registration, Calibration & Force Estimation Process
        structures and the .TRI file (test_assemble_AAM_model)
 # ============================================
 
-#  (Part 2, C++)
+(Part 2, C++)
 
     6. Build the AAM (am_build_apm, am_build_aam)
     7. Create .pts files corresponding to all of the "To-Do" list images
        (am_markup).
 # ============================================
 
-# (Part 3, MATLAB)
+(Part 3, MATLAB)
 
     8. Verify that the AAM has properly registered all images and that no
        duplicates exist (test_verify_aam_registration)
@@ -77,5 +77,7 @@ Steps to Complete the Registration, Calibration & Force Estimation Process
 
 # ============================================
 This document was prepared by Navid Fallahinia
+
 Created 01 April 2018
+
 Modified 26 August 2018
