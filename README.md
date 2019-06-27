@@ -1,4 +1,3 @@
- # ============================
  #    General Information 
  # ============================
 All code in this folder is for registration, calibration and data analysis.  For the purposes of this file, "subject" refers to an individual, "finger" refers to any of the digits of the hand (thumb, index, middle, ring or little) and "light color" refers to the LED color used to illuminate the finger while images are collected.
@@ -17,7 +16,6 @@ The 'am_tools' folder contains the am_tools functions.  For your use in registra
 
 The current file has the "Entire Process" part which gives a list of all steps that need to be taken from initial data collection to data analysis.
 
-# ============================
 #     Entire Process 
 # ============================
 
