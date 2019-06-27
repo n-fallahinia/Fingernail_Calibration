@@ -1,8 +1,10 @@
 # fingernail_soft
 
-=============================================================
-                       General Information
-=============================================================
+# =============================================================
+
+#                       General Information 
+
+# =============================================================
 
 All code in this folder is for registration, calibration and data analysis.  For the purposes of this file, "subject" refers to an individual, "finger" refers to any of the digits of the hand (thumb, index, middle, ring or little) and "light color" refers to the LED color used to illuminate the finger while images are collected.
 
